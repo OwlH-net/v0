@@ -1,5 +1,5 @@
 # v0
 
-All public files from repo.owlh.net
+All OwlH v0 public files from repo.owlh.net
 
-repo.owlh.net will be deprecated soon.
+repo.owlh.net will be deprecated by 05.31.23
