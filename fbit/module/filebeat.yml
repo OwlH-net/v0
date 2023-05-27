@@ -1,0 +1,13 @@
+# Wazuh - Filebeat configuration file
+filebeat.modules:
+  - module: owlh
+    alerts:
+      enabled: true
+
+setup.template.json.enabled: true
+setup.template.json.path: '/etc/filebeat/owlh-template.json'
+setup.template.json.name: 'owlh'
+setup.template.overwrite: true
+setup.ilm.enabled: false
+
+output.elasticsearch.hosts: ['http://172.31.34.42:9200']

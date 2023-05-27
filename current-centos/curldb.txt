@@ -1,0 +1,1 @@
+curl -k -u elastic:YOURPASSWD -X POST "<ELASTICIP>:5601/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@/tmp/owlhdashboards.ndjson

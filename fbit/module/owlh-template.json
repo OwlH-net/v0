@@ -1,0 +1,51 @@
+{
+  "order": 0,
+  "index_patterns": [
+    "owlh-alerts-1.x-*",
+    "owlh-data-1.x-*"
+  ],
+  "settings": {
+    "index.refresh_interval": "5s",
+    "index.number_of_shards": "3",
+    "index.number_of_replicas": "0",
+    "index.auto_expand_replicas": "0-0",
+    "index.mapping.total_fields.limit": 10000,
+    "index.query.default_field": [
+      "type"
+    ]
+  },
+  "mappings": {
+    "numeric_detection": true,
+    "dynamic": true,
+    "dynamic_templates": [],
+    "date_detection": false,
+    "properties": {
+      "data.dstip": {
+        "type": "ip"
+      },
+      "data.dstport": {
+        "type": "text"
+      },
+      "data.srcip": {
+        "type": "ip"
+      },
+      "@version": {
+        "type": "text"
+      },
+      "data.srcport": {
+        "type": "text"
+      },
+      "data.signature_id": {
+        "type": "text"
+      },
+      "@timestamp": {
+        "type": "date"
+      },
+      "timestamp": {
+        "type": "date",
+        "format": "date_optional_time||epoch_millis"
+      }
+    }
+  },
+  "version": 1
+}
